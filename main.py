@@ -89,8 +89,7 @@ while True:
     [cell.draw() for cell in grid_cells]
     current_cell.visited = True
     current_cell.draw_current_cell()
-    [pygame.draw.rect(sc, colors[i], (cell.x * TILE + 2, cell.y * TILE + 2,
-                                         TILE - 4, TILE - 4)) for i, cell in enumerate(stack)]
+    [pygame.draw.rect(sc, colors[i], (cell.x * TILE + 2, cell.y * TILE + 2, TILE - 4, TILE - 4)) for i, cell in enumerate(stack)]
 
     next_cell = current_cell.check_neighbors()
     if next_cell:
